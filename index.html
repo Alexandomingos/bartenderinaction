@@ -190,6 +190,24 @@ html{scroll-behavior:auto}
 .b-sede figcaption strong{color:var(--tx);font-weight:600}
 .b-maplink{color:var(--tx);font-weight:600;text-underline-offset:3px}
 .b-maplink:hover{color:var(--tx)}
+/* v3: shots acima das fotos, custo, quem somos em coluna, gelo */
+.b-shots-top{display:flex;flex-wrap:wrap;align-items:stretch;gap:clamp(32px,5vw,80px)}
+.b-shots-copy{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.b-cost{flex:1 1 340px;min-width:0;max-width:520px;align-self:flex-end;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:clamp(20px,3vw,32px);border:1px solid var(--line);border-radius:20px;background:var(--bg)}
+.b-cost-l{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--tx)}
+.b-cost-v{font-family:var(--serif);font-weight:400;font-size:clamp(52px,6vw,76px);line-height:1}
+.b-cost-d{font-size:15px;color:var(--mu);margin-bottom:8px}
+.b-shots-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:16px;margin-top:clamp(32px,4vw,56px)}
+.b-shots-photos .b-shots-a,.b-shots-photos .b-shots-b{width:100%;margin:0;border:0;aspect-ratio:3/2;object-fit:cover;border-radius:14px;display:block}
+.b-quem{flex-direction:column;align-items:stretch;gap:clamp(32px,4vw,56px)}
+.b-quem-copy{flex:none}
+.b-pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:0 32px}
+.b-sede{flex:none;width:100%}
+.b-sede .b-gi img{aspect-ratio:16/9;object-position:center 58%}
+@media (max-width:820px){.b-sede .b-gi img{aspect-ratio:4/3}}
+.b-est-ice{font-size:19px;font-weight:600;color:var(--tx)}
+.b-est-ice strong{font-weight:600}
+.b-est-d.warn{color:var(--mu)}
 
 .b-hide{display:none !important}
 </style>
@@ -207,21 +225,21 @@ html{scroll-behavior:auto}
 <a class="b-link" href="#quem">Quem somos</a>
 <a class="b-link" href="#carta">Carta</a>
 <a class="b-link" href="#shots">Shots</a>
-<a class="b-pill" href="#resumo">Minha seleção <b id="navCount">0/12</b></a>
+<a class="b-pill" href="#resumo">Minha seleção <b id="navCount">0</b></a>
 </div>
 </nav>
 <div class="b-hero-grid">
 <div class="b-hero-copy">
 <p class="b-eyebrow b-rise">Proposta interativa · Open bar de coquetéis</p>
 <h1 class="b-h1 b-rise b-d1">Monte o bar do <em>seu evento.</em></h1>
-<p class="b-lead b-rise b-d2">Escolha de 6 a 12 drinks da nossa carta, conte um pouco sobre a festa e envie tudo de uma vez. Sem ler, copiar e reescrever nada.</p>
+<p class="b-lead b-rise b-d2">Escolha no mínimo 4 drinks da nossa carta, conte um pouco sobre a festa e envie tudo de uma vez. Sem ler, copiar e reescrever nada.</p>
 <div class="b-rise b-d3" style="display: flex; flex-wrap: wrap; gap: 12px">
 <a class="b-btn" href="#carta">Escolher meus drinks</a>
 <a class="b-btn ghost" href="#como">Como funciona</a>
 </div>
 <div class="b-stats b-rise b-d4">
-<div class="b-stat"><strong>2014</strong><span>Desde</span></div>
-<div class="b-stat"><strong>+650</strong><span>Eventos realizados</span></div>
+<div class="b-stat"><strong>14</strong><span>Anos de mercado</span></div>
+<div class="b-stat"><strong>+1000</strong><span>Eventos realizados</span></div>
 </div>
 </div>
 <div class="b-hero-photo b-rise b-d2">
@@ -238,7 +256,7 @@ html{scroll-behavior:auto}
 <p class="b-eyebrow">Como funciona</p>
 <h2 class="b-h2" style="margin-top: 16px">Três passos até a <em>sua proposta.</em></h2>
 <div class="b-steps">
-<div class="b-step"><span class="n">01</span><h3>Escolha seus drinks</h3><p>Navegue pela carta e toque em Adicionar. São de 6 a 12 drinks, para calcularmos o custo final do orçamento.</p></div>
+<div class="b-step"><span class="n">01</span><h3>Escolha seus drinks</h3><p>Navegue pela carta e toque em Adicionar. São no mínimo 4 drinks e você escolhe quantos quiser. Quanto mais drinks no menu, maior o valor do orçamento.</p></div>
 <div class="b-step"><span class="n">02</span><h3>Conte sobre o evento</h3><p>Data, local, número de convidados (mínimo de 50) e se quer horas extras. Leva menos de um minuto.</p></div>
 <div class="b-step"><span class="n">03</span><h3>Envie e receba a proposta</h3><p>Você baixa o pedido em PDF e manda tudo para a nossa equipe comercial, que volta com a proposta final.</p></div>
 </div>
@@ -251,7 +269,7 @@ html{scroll-behavior:auto}
 <div class="b-quem-copy">
 <p class="b-eyebrow">Quem somos</p>
 <h2 class="b-h2">Conheça a <em>Bartender In Action.</em></h2>
-<p class="b-lead">Somos uma empresa de bar para eventos e fazemos coquetelaria desde 2014, com mais de 650 eventos realizados. Antes de fechar, você pode ver de perto o que levamos para a sua festa.</p>
+<p class="b-lead">Somos uma empresa de bar para eventos e fazemos coquetelaria há 14 anos, com mais de 1000 eventos realizados. Antes de fechar, você pode ver de perto o que levamos para a sua festa.</p>
 <div class="b-pillars">
 <div class="b-pillar"><h3>Estrutura completa</h3><p>Levamos balcão, taças e copos de vidro, compoteiras, baldes de gelo e todos os utensílios para o preparo dos coquetéis.</p></div>
 <div class="b-pillar"><h3>Balcões para cada estilo</h3><p>Temos balcões em vários acabamentos, como ripado, branco clássico, preto fosco e mármore, para combinar com a decoração do evento.</p></div>
@@ -277,6 +295,7 @@ html{scroll-behavior:auto}
 <div class="b-rule"><span class="b-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.2c2.4.2 4 2 4 4.3"/></svg></span><div><h3>Todos os convidados contam</h3><p>Contratamos a partir de 50 convidados e consideramos todos os presentes com mais de 5 anos, porque incluímos coquetéis sem álcool.</p></div></div>
 <div class="b-rule"><span class="b-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5"/><path d="M12 12v9"/></svg></span><div><h3>Insumos por nossa conta</h3><p>Todos os insumos e materiais para o preparo dos coquetéis são nossos. Se preferir fornecer as bebidas, indicamos a quantidade de garrafas e sugerimos rótulos e marcas.</p></div></div>
 <div class="b-rule"><span class="b-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.3 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span><div><h3>Equipe dimensionada para você</h3><p>A quantidade de profissionais depende do número de convidados, das bebidas servidas na festa e do cardápio escolhido. Toda a equipe vai uniformizada.</p></div></div>
+<div class="b-rule"><span class="b-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9"/><path d="M9.5 4.5L12 7l2.5-2.5M9.5 19.5L12 17l2.5 2.5"/></svg></span><div><h3>Gelo do seu evento</h3><p>O gelo é por conta do contratante ou pode ser alinhado com o buffet, que costuma facilitar o armazenamento. Calculamos 1 saco de 5 kg a cada 10 convidados, e a quantidade já aparece no seu pedido.</p></div></div>
 <div class="b-rule"><span class="b-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5h4v5"/></svg></span><div><h3>O espaço do bar</h3><p>O local do bar deve ser coberto, iluminado e ter ponto de água por perto.</p></div></div>
 <div class="b-rule"><span class="b-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14l-7 8z"/><path d="M12 12v8"/><path d="M8 20h8"/></svg></span><div><h3>Servidos como nas fotos</h3><p>Todos os coquetéis são servidos como nas fotos da carta e da degustação, durante todo o evento, em taças e copos de vidro.</p></div></div>
 </div>
@@ -288,13 +307,13 @@ html{scroll-behavior:auto}
 <div class="b-bar-top">
 <div style="flex: 1 1 520px; display: flex; flex-direction: column; gap: 16px">
 <p class="b-eyebrow">A carta</p>
-<h2 class="b-h2">Escolha de 6 a 12 <em>drinks.</em></h2>
+<h2 class="b-h2">Escolha no mínimo 4 <em>drinks.</em></h2>
 </div>
 <p class="b-lead" style="flex: 1 1 360px">Criações exclusivas, drinks autorais e releituras de grandes clássicos, com ingredientes artesanais. Toque em Adicionar nos que você quer no seu evento.</p>
 </div>
 <div class="b-tools">
 <div class="b-chips" id="chips" role="group" aria-label="Filtrar drinks"></div>
-<p class="b-count" aria-live="polite">Mostrando <strong id="shown">19</strong> de 19 · escolhidos <strong id="cnt1">0</strong> de 12</p>
+<p class="b-count" aria-live="polite">Mostrando <strong id="shown">19</strong> de 19 · escolhidos <strong id="cnt1">0</strong> · mínimo 4</p>
 </div>
 <p class="b-pricenote" id="priceNote"></p>
 <div class="b-grid" id="grid"></div>
@@ -302,18 +321,24 @@ html{scroll-behavior:auto}
 </section>
 
 <section id="shots" class="b-shots">
-<div class="b-wrap b-shots-grid">
-<div class="b-shots-photos">
-<img class="b-shots-a" data-img="pour" alt="Bartender de máscara luminosa servindo shots em uma régua iluminada durante a festa">
-<img class="b-shots-b" data-img="staff" alt="Três bartenders com máscaras luminosas segurando garrafas em blocos de gelo, com bandejas de shots à frente">
-</div>
+<div class="b-wrap">
+<div class="b-shots-top">
 <div class="b-shots-copy">
 <p class="b-eyebrow">Régua e bandeja de drinks</p>
 <h2 class="b-h2">Surpreenda <em>a pista.</em></h2>
 <p class="b-lead" style="color: var(--tx)">Mais animação para a sua festa! Shots à escolha, servidos direto na pista, na régua ou na bandeja.</p>
 <p class="b-lead">Para saber quais bebidas estão disponíveis, consulte o comercial.</p>
-<span class="b-tag">Valor de acordo com o shot escolhido</span>
+</div>
+<div class="b-cost">
+<span class="b-cost-l">Cada garrafa de shot</span>
+<strong class="b-cost-v">R$ 220,00</strong>
+<span class="b-cost-d">Você escolhe as unidades. O valor é o mesmo para qualquer shot, seja licor, tequila tradicional ou outro: nenhum passa disso.</span>
 <button type="button" class="b-btn" id="reguaBtn" aria-pressed="false">Incluir shots na minha proposta</button>
+</div>
+</div>
+<div class="b-shots-photos">
+<img class="b-shots-a" data-img="pour" alt="Bartender de máscara luminosa servindo shots em uma régua iluminada durante a festa">
+<img class="b-shots-b" data-img="staff" alt="Três bartenders com máscaras luminosas segurando garrafas em blocos de gelo, com bandejas de shots à frente">
 </div>
 </div>
 </section>
@@ -325,7 +350,7 @@ html{scroll-behavior:auto}
 <div class="b-panels">
 
 <div class="b-panel" style="flex: 1 1 380px">
-<div class="b-ph-head"><h3>Drinks escolhidos</h3><span class="b-count"><strong id="cnt2">0</strong> de 12 · mínimo 6</span></div>
+<div class="b-ph-head"><h3>Drinks escolhidos</h3><span class="b-count"><strong id="cnt2">0</strong> escolhidos · mínimo 4</span></div>
 <div id="chosen"></div>
 <div id="clearWrap" class="b-hide" style="border-top: 1px solid var(--line); padding-top: 8px">
 <button type="button" class="b-x" id="clearBtn">Limpar seleção</button>
@@ -344,6 +369,7 @@ html{scroll-behavior:auto}
 <label class="b-field">Horas de open bar<select class="b-input" id="f-hours"><option>4 horas (padrão)</option><option>4 horas + horas extras (a combinar)</option></select></label>
 <label class="b-field">Bebidas<select class="b-input" id="f-supply"><option>Vocês fornecem tudo</option><option>Eu vou fornecer as bebidas</option></select></label>
 <label class="b-field full b-hide" id="shotField">Shot de preferência (opcional)<input class="b-input" id="f-shot" type="text" placeholder="Se já tiver algum em mente"></label>
+<label class="b-field b-hide" id="bottleField">Garrafas de shot (R$ 220,00 cada)<input class="b-input" id="f-bottles" type="number" min="1" inputmode="numeric" placeholder="Ex.: 2"></label>
 <label class="b-field full">Observações (opcional)<textarea class="b-input" id="f-notes" placeholder="Algo que a gente deva saber sobre o evento?"></textarea></label>
 </div>
 <div class="b-est" id="est" aria-live="polite"></div>
@@ -792,7 +818,9 @@ const IMG = {"logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAAEOCAYA
 const WA = '5511984962995';
 const SAMPLE = false;
 const WA_TXT = '(11) 98496-2995';
-const MIN = 6, MAX = 12;
+const MIN = 4, MAX = Infinity;
+const SHOT_BOTTLE = 220;   // valor de cada garrafa de shot, em R$
+const ICE_PER = 10, ICE_KG = 5;   // 1 saco de gelo de 5 kg a cada 10 convidados
 // ---- Valores simbólicos (edite aqui) ----
 const KIND_PRICE = { 'Clássico': 7, 'Autoral': 8, 'Novo': 9 }; // valor de referência por drink, em R$
 const SHOW_PRICES = false;  // true volta a mostrar valores por drink e a estimativa do open bar
@@ -829,10 +857,11 @@ const DRINKS = [
 ];
 const CHIPS = [['todos', 'Todos'], ['novo', 'Novos'], ['classico', 'Clássicos'], ['autoral', 'Autorais'], ['vodka', 'Vodka'], ['gin', 'Gin'], ['cachaca', 'Cachaça'], ['rum', 'Rum'], ['tequila', 'Tequila']];
 const byId = {}; DRINKS.forEach(d => { if (d.price == null) d.price = KIND_PRICE[d.kind]; byId[d.id] = d; });
+const brl2 = (n) => { const s = n.toFixed(2).split('.'); return 'R$ ' + s[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ',' + s[1]; };
 const brl = (n) => 'R$ ' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 const $ = (id) => document.getElementById(id);
 let sel = [], filter = 'todos', regua = false;
-const f = { name: '', phone: '', type: 'Casamento', date: '', place: '', guests: '', hours: '4 horas (padrão)', supply: 'Vocês fornecem tudo', shot: '', notes: '' };
+const f = { name: '', phone: '', bottles: '', type: 'Casamento', date: '', place: '', guests: '', hours: '4 horas (padrão)', supply: 'Vocês fornecem tudo', shot: '', notes: '' };
 
 document.querySelectorAll('[data-img]').forEach(el => { el.src = IMG[el.dataset.img]; });
 
@@ -853,7 +882,6 @@ function renderCards() {
     const on = sel.indexOf(d.id) >= 0, full = !on && sel.length >= MAX;
     let btn;
     if (on) btn = '<button type="button" class="b-add on" aria-pressed="true" aria-label="Remover ' + d.name + ' da seleção" data-id="' + d.id + '">' + CHECK + 'Escolhido · remover</button>';
-    else if (full) btn = '<button type="button" class="b-add" disabled aria-label="Limite de 12 drinks atingido">Limite de 12 atingido</button>';
     else btn = '<button type="button" class="b-add" aria-pressed="false" aria-label="Adicionar ' + d.name + ' à seleção" data-id="' + d.id + '">Adicionar à seleção</button>';
     return '<article class="b-card' + (on ? ' on' : '') + '"><div class="b-ph"><img src="' + IMG[d.id] + '" alt="Foto do drink ' + d.name + '"><span class="b-kind' + (d.kind === 'Novo' ? ' new' : '') + '">' + d.kind + '</span>' +
       (on ? '<span class="b-tick" role="img" aria-label="Selecionado"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>' : '') +
@@ -864,16 +892,15 @@ function renderCards() {
 function renderBar() {
   const n = sel.length;
   let status;
-  if (n === 0) status = 'escolha de 6 a 12 drinks';
-  else if (n < MIN) status = (MIN - n === 1 ? 'falta 1 para o mínimo de 6' : 'faltam ' + (MIN - n) + ' para o mínimo de 6');
-  else if (n < MAX) status = 'seleção pronta, dá para adicionar mais ' + (MAX - n);
-  else status = 'limite atingido';
-  $('status').textContent = n + ' de 12 · ' + status;
-  $('navCount').textContent = n + '/12';
+  if (n === 0) status = 'escolha no mínimo 4 drinks';
+  else if (n < MIN) status = (MIN - n === 1 ? 'falta 1 para o mínimo de ' + MIN : 'faltam ' + (MIN - n) + ' para o mínimo de ' + MIN);
+  else status = 'seleção pronta, pode adicionar quantos quiser';
+  $('status').textContent = n + (n === 1 ? ' drink' : ' drinks') + ' · ' + status;
+  $('navCount').textContent = n;
   $('cnt1').textContent = n; $('cnt2').textContent = n;
   $('thumbs').innerHTML = sel.map(id => '<img class="b-thumb" src="' + IMG[id] + '" alt="' + byId[id].name + '">').join('');
   let segs = '';
-  for (let i = 0; i < MAX; i++) segs += '<span class="b-seg' + (i < n ? ' on' : '') + (i === MIN - 1 ? ' min' : '') + '"></span>';
+  for (let i = 0, tot = Math.max(MIN + 4, n); i < tot; i++) segs += '<span class="b-seg' + (i < n ? ' on' : '') + (i === MIN - 1 ? ' min' : '') + '"></span>';
   $('segs').innerHTML = segs;
 }
 
@@ -895,35 +922,42 @@ function renderRegua() {
   b.className = 'b-btn' + (regua ? ' ghost' : '');
   b.innerHTML = regua ? CHECK + 'Incluído na proposta · remover' : 'Incluir shots na minha proposta';
   $('shotField').classList.toggle('b-hide', !regua);
+  $('bottleField').classList.toggle('b-hide', !regua);
 }
 
 function calc() {
-  const n = sel.length, g = parseInt(f.guests, 10);
-  const r = { n, guests: isNaN(g) ? 0 : g, ok: false, reason: '' };
-  if (n < MIN) { r.reason = 'drinks'; return r; }
-  if (!r.guests) { r.reason = 'guests-empty'; return r; }
-  if (r.guests < MIN_GUESTS) { r.reason = 'guests-min'; return r; }
-  if (f.supply !== 'Vocês fornecem tudo') { r.reason = 'supply'; return r; }
-  if (!SHOW_PRICES) { r.reason = 'noprice'; return r; }
-  r.avg = sel.reduce((s, id) => s + byId[id].price, 0) / n;
-  r.perGuest = Math.round(r.avg * DRINKS_PER_GUEST);
-  r.total = r.perGuest * r.guests;
-  r.ok = true; return r;
+  const n = sel.length, g = parseInt(f.guests, 10), b = parseInt(f.bottles, 10);
+  const r = { n, guests: isNaN(g) ? 0 : g, bottles: isNaN(b) || b < 0 ? 0 : b, ok: false, reason: '' };
+  if (r.guests >= MIN_GUESTS) { r.ice = Math.ceil(r.guests / ICE_PER); r.iceKg = r.ice * ICE_KG; }
+  r.shots = regua ? r.bottles * SHOT_BOTTLE : 0;
+  if (n < MIN) r.reason = 'drinks';
+  else if (!r.guests) r.reason = 'guests-empty';
+  else if (r.guests < MIN_GUESTS) r.reason = 'guests-min';
+  else if (f.supply !== 'Vocês fornecem tudo') r.reason = 'supply';
+  else r.reason = 'noprice';
+  return r;
+}
+
+function shotLine(c) {
+  return c.bottles ? c.bottles + (c.bottles === 1 ? ' garrafa' : ' garrafas') + ' × ' + brl2(SHOT_BOTTLE) + ' = ' + brl2(c.shots) : '';
 }
 
 function renderEst() {
   const c = calc(), el = $('est');
-  let h, err = false;
-  if (c.ok) {
-    h = '<span class="b-est-l">Estimativa do open bar · 4 horas</span><strong class="b-est-v">' + brl(c.total) + '</strong>' +
-      '<span class="b-est-d">' + brl(c.perGuest) + ' por convidado × ' + c.guests + ' convidados, com consumo ilimitado durante as 4 horas.</span>' +
-      '<span class="b-est-s">Estimativa pela média dos valores dos drinks escolhidos. O valor final é confirmado pela nossa equipe, conforme data, local e cardápio.' + (regua ? ' Os shots são cobrados à parte, de acordo com o shot escolhido.' : '') + (f.hours.indexOf('extras') >= 0 ? ' Horas extras também são cobradas à parte.' : '') + '</span>';
-  } else if (c.reason === 'drinks') h = '<span class="b-est-d">Escolha pelo menos ' + MIN + ' drinks para montar o seu pedido.</span>';
-  else if (c.reason === 'guests-empty') h = '<span class="b-est-d">Informe o número de convidados (a partir de ' + MIN_GUESTS + ')' + (SHOW_PRICES ? ' para ver a estimativa do open bar.' : '.') + '</span>';
-  else if (c.reason === 'guests-min') { err = true; h = '<span class="b-est-d">O open bar é contratado a partir de ' + MIN_GUESTS + ' convidados.</span>'; }
-  else if (c.reason === 'noprice') h = '<span class="b-est-l">Open bar · 4 horas</span><span class="b-est-d">' + c.guests + ' convidados, com consumo ilimitado durante as 4 horas.</span><span class="b-est-s">O valor é enviado pela nossa equipe comercial, conforme data, local e cardápio.' + (regua ? ' Os shots são cobrados à parte, de acordo com o shot escolhido.' : '') + (f.hours.indexOf('extras') >= 0 ? ' Horas extras também são cobradas à parte.' : '') + '</span>';
-  else h = '<span class="b-est-d">Com as bebidas por sua conta, o valor é calculado pela nossa equipe. Envie sua seleção que voltamos com a proposta.</span>';
-  el.className = 'b-est' + (c.ok ? ' ok' : '') + (err ? ' err' : '');
+  let h = '', err = false;
+  if (!c.guests) h = '<span class="b-est-d">Informe o número de convidados (a partir de ' + MIN_GUESTS + ') para ver o seu pedido.</span>';
+  else if (c.guests < MIN_GUESTS) { err = true; h = '<span class="b-est-d">O open bar é contratado a partir de ' + MIN_GUESTS + ' convidados.</span>'; }
+  else {
+    h = '<span class="b-est-l">Seu pedido · open bar de 4 horas</span>' +
+      '<span class="b-est-d">' + c.guests + ' convidados, com consumo ilimitado durante as 4 horas.</span>' +
+      '<span class="b-est-ice"><strong>Gelo: ' + c.ice + ' sacos de ' + ICE_KG + ' kg</strong> (' + c.iceKg + ' kg no total)</span>' +
+      '<span class="b-est-s">Por conta do contratante ou alinhado com o buffet. Calculamos 1 saco a cada ' + ICE_PER + ' convidados, arredondando para cima.</span>';
+    if (regua) h += c.bottles ? '<span class="b-est-ice"><strong>Shots: ' + shotLine(c) + '</strong></span><span class="b-est-s">O valor da garrafa é o mesmo para qualquer shot.</span>' : '<span class="b-est-d">Shots: informe quantas garrafas você quer (' + brl2(SHOT_BOTTLE) + ' cada).</span>';
+    if (c.reason === 'drinks') h += '<span class="b-est-d warn">Escolha pelo menos ' + MIN + ' drinks para montar o seu pedido.</span>';
+    else if (c.reason === 'supply') h += '<span class="b-est-s">Com as bebidas por sua conta, o valor é calculado pela nossa equipe.</span>';
+    else h += '<span class="b-est-s">O valor do open bar é enviado pela nossa equipe comercial, conforme data, local e número de drinks do menu. Quanto mais drinks, maior o valor.</span>';
+  }
+  el.className = 'b-est' + (c.guests >= MIN_GUESTS ? ' ok' : '') + (err ? ' err' : '');
   el.innerHTML = h;
 }
 
@@ -942,10 +976,11 @@ function renderSummary() {
   L.push('*Convidados acima de 5 anos:* ' + (f.guests || 'a definir'));
   L.push('*Open bar:* ' + f.hours + ' (consumo ilimitado)');
   L.push('*Bebidas:* ' + f.supply);
-  L.push('*Shots na régua/bandeja:* ' + (regua ? 'Sim' + (f.shot.trim() ? ' (preferência: ' + f.shot.trim() + ')' : '') : 'Não'));
+  L.push('*Shots na régua/bandeja:* ' + (regua ? 'Sim' + (c.bottles ? ' (' + shotLine(c) + ')' : '') + (f.shot.trim() ? ' (preferência: ' + f.shot.trim() + ')' : '') : 'Não'));
+  if (c.ice) L.push('*Gelo:* ' + c.ice + ' sacos de ' + ICE_KG + ' kg (por conta do contratante ou alinhado com o buffet)');
   L.push(''); L.push('*Drinks escolhidos (' + n + '):*');
   sel.forEach((id, i) => L.push((i + 1) + '. ' + byId[id].name));
-  if (c.ok) { L.push(''); L.push('*Estimativa do open bar (4 horas):* ' + brl(c.total) + ' (' + brl(c.perGuest) + ' por convidado)'); }
+  if (false) { L.push(''); L.push('*Estimativa do open bar (4 horas):* ' + brl(c.total) + ' (' + brl(c.perGuest) + ' por convidado)'); }
   if (f.notes.trim()) { L.push(''); L.push('*Observações:* ' + f.notes.trim()); }
   const message = L.join('\n');
   window.__msg = message;
@@ -982,7 +1017,7 @@ $('actions').addEventListener('click', e => {
   const fallback = () => { const t = document.createElement('textarea'); t.value = window.__msg; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (x) {} document.body.removeChild(t); };
   if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(window.__msg).then(done, fallback); else fallback();
 });
-[['name', 'f-name'], ['phone', 'f-phone'], ['type', 'f-type'], ['date', 'f-date'], ['place', 'f-place'], ['guests', 'f-guests'], ['hours', 'f-hours'], ['supply', 'f-supply'], ['shot', 'f-shot'], ['notes', 'f-notes']].forEach(p => {
+[['name', 'f-name'], ['phone', 'f-phone'], ['type', 'f-type'], ['date', 'f-date'], ['place', 'f-place'], ['guests', 'f-guests'], ['hours', 'f-hours'], ['supply', 'f-supply'], ['shot', 'f-shot'], ['bottles', 'f-bottles'], ['notes', 'f-notes']].forEach(p => {
   const el = $(p[1]);
   const h = () => { if (f[p[0]] === el.value) return; f[p[0]] = el.value; renderSummary(); };
   el.addEventListener('input', h); el.addEventListener('change', h);
@@ -1045,7 +1080,7 @@ function makePdf() {
       ['Tipo de evento', f.type], ['Data do evento', dateTxt],
       ['Cidade ou local', f.place.trim() || 'a definir', true],
       ['Convidados (acima de 5 anos)', String(c.guests)], ['Open bar', f.hours.indexOf('extras') >= 0 ? '4 horas + horas extras (a combinar)' : '4 horas, consumo ilimitado'],
-      ['Bebidas', f.supply], ['Shots na régua ou bandeja', regua ? 'Sim' + (f.shot.trim() ? ' (' + f.shot.trim() + ')' : '') : 'Não']
+      ['Bebidas', f.supply], ['Shots na régua ou bandeja', regua ? 'Sim' + (c.bottles ? ', ' + c.bottles + (c.bottles === 1 ? ' garrafa' : ' garrafas') : '') + (f.shot.trim() ? ' (' + f.shot.trim() + ')' : '') : 'Não']
     ];
     for (let k = 0; k < items.length;) {
       const a = items[k], full = a[2], b = full ? null : items[k + 1];
@@ -1086,8 +1121,12 @@ function makePdf() {
       doc.setFont('helvetica', 'bold'); doc.setFontSize(24); doc.setTextColor(200, 40, 58); doc.text(brl(c.total), W - M - 6, y + 15.5, { align: 'right' });
       y += 29;
     } else {
+      const paras = ['Open bar de 4 horas com consumo ilimitado para ' + c.guests + ' convidados.',
+        'Gelo: ' + c.ice + ' sacos de ' + ICE_KG + ' kg (' + c.iceKg + ' kg no total), por conta do contratante ou alinhado com o buffet. Calculamos 1 saco a cada ' + ICE_PER + ' convidados.'];
+      if (regua) paras.push(c.bottles ? 'Shots: ' + shotLine(c) + '. O valor da garrafa é o mesmo para qualquer shot.' : 'Shots: quantidade de garrafas a definir (' + brl2(SHOT_BOTTLE) + ' cada garrafa).');
+      paras.push(c.reason === 'supply' ? 'Com as bebidas fornecidas pelo contratante, o valor é calculado pela equipe comercial da Bartender In Action.' : 'O valor do open bar é enviado pela equipe comercial da Bartender In Action, conforme data, local e número de drinks do menu.');
       doc.setFont('helvetica', 'normal'); doc.setFontSize(10); ink();
-      const s = wrap(c.reason === 'supply' ? 'Com as bebidas fornecidas pelo contratante, o valor é calculado pela equipe comercial da Bartender In Action.' : 'Open bar de 4 horas com consumo ilimitado para ' + c.guests + ' convidados. O valor é enviado pela equipe comercial da Bartender In Action, conforme data, local e cardápio.', TW); need(s.length * 5); doc.text(s, M, y); y += s.length * 5 + 2;
+      paras.forEach(s => { const l = wrap(s, TW); need(l.length * 4.8); doc.text(l, M, y); y += l.length * 4.8 + 1.6; });
     }
     // condições
     section('Condições');
@@ -1095,7 +1134,9 @@ function makePdf() {
       'Open bar com consumo ilimitado durante as 4 horas contratadas. Horas extras são combinadas à parte.',
       'Contratação a partir de ' + MIN_GUESTS + ' convidados. Consideramos todos os presentes com mais de 5 anos.',
       f.supply === 'Vocês fornecem tudo' ? 'Todos os insumos e materiais para o preparo dos coquetéis são fornecidos pela Bartender In Action, com equipe uniformizada e dimensionada para o evento.' : 'Bebidas fornecidas pelo contratante: indicamos a quantidade de garrafas e sugerimos rótulos e marcas.',
-      regua ? 'Shots na régua ou bandeja: valor de acordo com o shot escolhido, cobrado à parte.' : null,
+      regua ? 'Shots na régua ou bandeja: garrafa a ' + brl2(SHOT_BOTTLE) + ', o mesmo valor para qualquer shot, cobrada à parte.' : null,
+      'Gelo por conta do contratante, ou alinhado com o buffet. Base de 1 saco de ' + ICE_KG + ' kg a cada ' + ICE_PER + ' convidados.',
+      'Quanto mais drinks no menu, maior o valor do orçamento.',
       'O local do bar deve ser coberto, iluminado e ter ponto de água por perto.',
       (SHOW_PRICES ? 'Esta é uma estimativa. O valor final é confirmado pela equipe comercial, conforme data, local e cardápio, e não substitui o contrato.' : 'O valor final é enviado pela equipe comercial, conforme data, local e cardápio. Este pedido não substitui o contrato.')
     ].filter(Boolean);
@@ -1133,7 +1174,7 @@ function makePdf() {
   }
 }
 
-$('priceNote').innerHTML = SHOW_PRICES ? '<strong>Valores simbólicos.</strong> O preço em cada drink é só uma referência, usada para estimar o seu open bar. O consumo é ilimitado durante as 4 horas contratadas.' : '<strong>Open bar com consumo ilimitado.</strong> São 4 horas de bar livre para os seus convidados. O valor é enviado pela nossa equipe depois que você mandar sua seleção.';
+$('priceNote').innerHTML = SHOW_PRICES ? '<strong>Valores simbólicos.</strong> O preço em cada drink é só uma referência, usada para estimar o seu open bar. O consumo é ilimitado durante as 4 horas contratadas.' : '<strong>Open bar com consumo ilimitado.</strong> São 4 horas de bar livre para os seus convidados. Quanto mais drinks no menu, maior o valor do orçamento, que a nossa equipe envia depois que você mandar sua seleção.';
 renderAll();
 </script>
 </body>
